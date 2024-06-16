@@ -4,6 +4,7 @@
 set -e
 
 sudo dnf install cmake
+sudo dnf install boost boost-devel
 
 echo "Установка..."
 
@@ -41,6 +42,7 @@ cat <<EOF > build.sh
 echo "Сборка..."
 
 rm -Rfv build
+set -e
 mkdir build
 cd build
 cmake ..
