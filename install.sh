@@ -3,8 +3,7 @@
 # Остановка скрипта при любой ошибке (ненулевом статусе завершения команды)
 set -e
 
-sudo dnf install cmake
-sudo dnf install boost boost-devel
+sudo dnf install cmake g++ boost boost-devel
 
 echo "Установка..."
 
