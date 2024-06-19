@@ -15,6 +15,7 @@ struct ErrorHandlerMiddleware {
     void after_handle(crow::request &req, crow::response &res, context &ctx) {
         if (res.code == 404) {
             try {
+                
                 res.body = readFile("../assets/pages/NotFoundPage.html");
                 res.set_header("Content-Type", "text/html");
             } catch(const std::exception& e) {
