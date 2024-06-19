@@ -41,7 +41,7 @@ cat <<EOF > build.sh
 #!/bin/bash
 echo "Сборка..."
 
-rm -Rfv build
+rm -Rf build
 set -e
 mkdir build
 cd build
